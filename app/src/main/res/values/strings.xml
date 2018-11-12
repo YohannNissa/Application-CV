@@ -12,6 +12,8 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aromanice">Aromanice</string>
+    <string name="zultania">Zultania</string>
 
     <string-array name="name">
         <item>HTML 5</item>
@@ -20,5 +22,6 @@
         <item>PHP</item>
         <item>Java</item>
         <item>C#</item>
+        <item>Kotlin for Android</item>
     </string-array>
 </resources>

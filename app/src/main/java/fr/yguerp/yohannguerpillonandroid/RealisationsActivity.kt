@@ -1,19 +1,21 @@
 package fr.yguerp.yohannguerpillonandroid
 
+import android.content.Intent
+import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBar
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.Menu
 import android.view.MenuItem
-import fr.yguerp.yohannguerpillonandroid.tools.replace
+import android.view.View
 import kotlinx.android.synthetic.main.activity_realisations.*
-import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.app_bar_realisations.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.email
+import org.jetbrains.anko.longToast
+import org.jetbrains.anko.toast
 
 class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, AnkoLogger {
 
@@ -54,13 +56,16 @@ class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_accueil -> {
-                replace(AccueilFragment())
+                val intentAccueil = Intent(this, MainActivity::class.java)
+                startActivity(intentAccueil)
             }
             R.id.nav_competences -> {
-                replace(CompetencesFragment())
+                val intentCompetences = Intent(this, CompetencesActivity::class.java)
+                startActivity(intentCompetences)
             }
             R.id.nav_realisations -> {
-
+                /*val intentRealisations = Intent(this, RealisationsActivity::class.java)
+                startActivity(intentRealisations)*/
             }
             R.id.nav_manage -> {
 
@@ -72,8 +77,25 @@ class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
 
             }
         }
-
         drawer_layout_realisations.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun onCardViewClick(v: View) {
+        var url = ""
+        when(v.id){
+            R.id.aromaniceCardView -> {
+                url = "https://aromanice.fr"
+            }
+            R.id.zultaniaCardView -> {
+                url = "https://zultania-mc.fr/"
+            }
+        }
+        val uris = Uri.parse(url)
+        val intents = Intent(Intent.ACTION_VIEW, uris)
+        val b = Bundle()
+        b.putBoolean("new_window", true)
+        intents.putExtras(b)
+        startActivity(intents)
     }
 }

@@ -6,13 +6,11 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import fr.yguerp.yohannguerpillonandroid.tools.replace
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.fragment_competences.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.email
 
@@ -22,7 +20,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        replace(AccueilFragment())
+        //replace(AccueilFragment())
 
         fab.setOnClickListener { view ->
             email("guerpillon.yohann@gmail.com")
@@ -64,14 +62,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_accueil -> {
-                replace(AccueilFragment())
+                //replace(AccueilFragment())
             }
             R.id.nav_competences -> {
-                replace(CompetencesFragment())
+                val intentCompetences = Intent(this, CompetencesActivity::class.java)
+                startActivity(intentCompetences)
             }
             R.id.nav_realisations -> {
-                val IntentRealisations = Intent(this, RealisationsActivity::class.java)
-                startActivity(IntentRealisations)
+                val intentRealisations = Intent(this, RealisationsActivity::class.java)
+                startActivity(intentRealisations)
             }
             R.id.nav_manage -> {
 

@@ -5,4 +5,24 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="size_120">120dp</dimen>
+    <dimen name="size_80">80dp</dimen>
+    <dimen name="size_300">300dp</dimen>
+    <dimen name="size_48">48dp</dimen>
+    <dimen name="size_176">176dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="spacing_24">24dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="spacing_8">8dp</dimen>
+    <dimen name="spacing_4">4dp</dimen>
+    <dimen name="spacing_2">2dp</dimen>
+    <!-- Size in sp of text-->
+    <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="size_200">200dp</dimen>
+    <dimen name="general_corner_radius">2dp</dimen>
+
 </resources>
