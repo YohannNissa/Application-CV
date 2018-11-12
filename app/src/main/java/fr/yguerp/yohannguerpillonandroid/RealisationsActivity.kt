@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import fr.yguerp.yohannguerpillonandroid.tools.replace
 import kotlinx.android.synthetic.main.activity_realisations.*
 import kotlinx.android.synthetic.main.app_bar_realisations.*
 import org.jetbrains.anko.AnkoLogger
@@ -67,14 +68,11 @@ class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
                 /*val intentRealisations = Intent(this, RealisationsActivity::class.java)
                 startActivity(intentRealisations)*/
             }
-            R.id.nav_manage -> {
-
+            R.id.nav_magiccircle -> {
+                replace(MagicCircleFragment())
             }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
+            R.id.nav_a_propos -> {
+                //replace()
             }
         }
         drawer_layout_realisations.closeDrawer(GravityCompat.START)

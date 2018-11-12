@@ -72,14 +72,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val intentRealisations = Intent(this, RealisationsActivity::class.java)
                 startActivity(intentRealisations)
             }
-            R.id.nav_manage -> {
-
+            R.id.nav_magiccircle -> {
+                replace(MagicCircleFragment())
             }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
+            R.id.nav_a_propos -> {
+                //replace()
             }
         }
 
