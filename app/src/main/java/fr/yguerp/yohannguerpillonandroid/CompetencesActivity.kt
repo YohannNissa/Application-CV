@@ -76,7 +76,7 @@ class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItem
                 startActivity(intentRealisations)
             }
             R.id.nav_magiccircle -> {
-
+                replace(MagicCircleFragment())
             }
             R.id.nav_a_propos -> {
 
