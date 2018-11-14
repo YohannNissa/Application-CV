@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.email
+import org.jetbrains.anko.toast
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, AnkoLogger {
 
@@ -35,6 +36,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
+        val fragment = fragmentManager.findFragmentById(R.id.magiccirclefragment)
+        if(fragment != null){
+            fragmentManager.beginTransaction().remove(fragment).commit()
+            toast("fragment not null")
+        }
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
@@ -62,7 +68,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_accueil -> {
-                //replace(AccueilFragment())
+                val intentAccueil = Intent(this, MainActivity::class.java)
+                startActivity(intentAccueil)
             }
             R.id.nav_competences -> {
                 val intentCompetences = Intent(this, CompetencesActivity::class.java)

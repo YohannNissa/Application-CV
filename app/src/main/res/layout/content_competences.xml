@@ -8,10 +8,21 @@
     tools:context=".CompetencesActivity"
     tools:showIn="@layout/app_bar_competences">
 
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     <android.support.v7.widget.RecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/recyclerViewCompetences"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

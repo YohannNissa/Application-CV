@@ -13,10 +13,12 @@ import android.view.MenuItem
 import fr.yguerp.yohannguerpillonandroid.tools.replace
 
 import kotlinx.android.synthetic.main.activity_competences.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_realisations.*
 import kotlinx.android.synthetic.main.app_bar_competences.*
 import kotlinx.android.synthetic.main.content_competences.*
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.toast
 
 class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, AnkoLogger {
 
@@ -43,6 +45,20 @@ class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 
         nav_view_competences.setNavigationItemSelectedListener(this)
     }
+
+    override fun onBackPressed() {
+        val fragment = fragmentManager.findFragmentById(R.id.magiccirclefragment)
+        if(fragment != null){
+            fragmentManager.beginTransaction().remove(fragment).commit()
+            toast("fragment not null")
+        }
+        if (drawer_layout_competences.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout_competences.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)

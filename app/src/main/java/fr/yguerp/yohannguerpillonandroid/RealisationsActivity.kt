@@ -65,8 +65,8 @@ class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
                 startActivity(intentCompetences)
             }
             R.id.nav_realisations -> {
-                /*val intentRealisations = Intent(this, RealisationsActivity::class.java)
-                startActivity(intentRealisations)*/
+                val intentRealisations = Intent(this, RealisationsActivity::class.java)
+                startActivity(intentRealisations)
             }
             R.id.nav_magiccircle -> {
                 replace(MagicCircleFragment())
