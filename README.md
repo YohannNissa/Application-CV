@@ -2,33 +2,39 @@ README
 
 
 
-Titre du Projet : Yohann Guerpillon – Application CV
+TitreÂ du ProjetÂ : Yohann Guerpillon â€“ Application CV
 
-Auteur du projet : Yohann Guerpillon
+Auteur du projetÂ : Yohann Guerpillon
 
-Auteur du Readme : Mathieu Cabane
+Auteur du ReadmeÂ : Mathieu Cabane
 
-Résumé du projet : Cette application a pour but de faire office de CV. En entretien ou rendez-vous d’embauche cette app doit être un bagage en plus à présenter.
-
-
-Application sur l’écran d’accueil :
+RÃ©sumÃ© du projetÂ : Cette application a pour but de faire office de CV. En entretien ou rendez-vous dâ€™embauche cette app doit Ãªtre un bagage en plus Ã  prÃ©senter.
 
 
+Application sur lâ€™Ã©cran dâ€™accueilÂ :
 
-Page d’accueil (MainActivity) :
+![mainactivity](https://yguerp.fr/assets/img/App1.png)
 
+Page dâ€™accueil (MainActivity)Â :
 
-Navigation Drawer :
+![mainactivity](https://yguerp.fr/assets/img/App2.png)
+
+Navigation DrawerÂ :
  
+ ![mainactivity](https://yguerp.fr/assets/img/App3.png)
 
-Liste des compétences (CompetencesActivity) :
+Liste des compÃ©tences (CompetencesActivity)Â :
  
+ ![mainactivity](https://yguerp.fr/assets/img/App4.png)
 
-Différentes réalisations (RealisationsActivity) :
+DiffÃ©rentes rÃ©alisations (RealisationsActivity)Â :
 
-Fragment Magic Circle (MagicCircleFragment) :
+![mainactivity](https://yguerp.fr/assets/img/App5.png)
 
+Fragment Magic Circle (MagicCircleFragment)Â :
 
-A propos  (AProposFragment) :
+![mainactivity](https://yguerp.fr/assets/img/App6.png)
 
+A proposÂ  (AProposFragment)Â :
 
+![mainactivity](https://yguerp.fr/assets/img/App7.png)
