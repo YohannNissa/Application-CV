@@ -6,7 +6,7 @@ Titre du Projet : Yohann Guerpillon – Application CV
 
 Auteur du projet : Yohann Guerpillon
 
-Auteur du Readme : Mathieu Cabane
+Auteur du Readme : Matthieu Cabanes
 
 Résumé du projet : Cette application a pour but de faire office de CV. En entretien ou rendez-vous d’embauche cette app doit être un bagage en plus à présenter.
 
