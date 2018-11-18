@@ -18,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_realisations.*
 import kotlinx.android.synthetic.main.app_bar_competences.*
 import kotlinx.android.synthetic.main.content_competences.*
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.email
 import org.jetbrains.anko.toast
 
 class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, AnkoLogger {
@@ -34,8 +35,7 @@ class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItem
         recyclerViewCompetences.adapter = ListAdapt(items)
 
         fab_competences.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            email("guerpillon.yohann@gmail.com")
         }
 
         val toggle = ActionBarDrawerToggle(
