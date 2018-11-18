@@ -1,6 +1,7 @@
 package fr.yguerp.yohannguerpillonandroid
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
@@ -11,6 +12,7 @@ import android.view.MenuItem
 import fr.yguerp.yohannguerpillonandroid.tools.replace
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.content_main.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.email
 import org.jetbrains.anko.toast
@@ -21,10 +23,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        //replace(AccueilFragment())
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { _ ->
             email("guerpillon.yohann@gmail.com")
+        }
+
+        codeProjetButton.setOnClickListener { _ ->
+            val uris = Uri.parse("https://github.com/YohannNissa/Application-CV")
+            val intents = Intent(Intent.ACTION_VIEW, uris)
+            val b = Bundle()
+            b.putBoolean("new_window", true)
+            intents.putExtras(b)
+            startActivity(intents)
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -49,15 +59,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
             R.id.action_settings -> return true
             else -> return super.onOptionsItemSelected(item)
@@ -65,7 +71,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_accueil -> {
                 val intentAccueil = Intent(this, MainActivity::class.java)
@@ -83,7 +88,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 replace(MagicCircleFragment())
             }
             R.id.nav_a_propos -> {
-                //replace()
+                replace(AProposFragment())
             }
         }
 

@@ -32,14 +32,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_10"
+                android:layout_marginRight="@dimen/spacing_10"
                 android:layout_marginTop="67dp"
                 android:text="@string/textAccueil"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 tools:layout_editor_absoluteX="19dp"
                 tools:layout_editor_absoluteY="82dp" />
 
             <Button
                 android:layout_width="186dp"
+                android:id="@+id/codeProjetButton"
                 android:layout_height="60dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="237dp"

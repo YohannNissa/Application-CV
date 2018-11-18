@@ -9,13 +9,20 @@
     <string name="realisations">Réalisations</string>
     <string name="competences">Compétences</string>
     <string name="accueil">Accueil</string>
+    <string name="a_propos">A propos</string>
 
     <string name="text_magiccircle_fragment">Ce fragment dessine plusieurs MagicCircle et les fait bouger à travers l\'écran</string>
     <string name="textAccueil">Bienvenue sur mon Application, \n
     Vous pourrez trouver sur mon application mes compétences ainsi que mes différentes réalisations. Les autres pages
     correspondent aux critères de rendu du TP.</string>
+    <string name="a_propos_text">Version de l\'application: 1.0
+    \n\nDeveloppé par: Yohann Guerpillon
+    \n\nPublié le: 18/11/2018</string>
     <string name="aromanice">Aromanice</string>
     <string name="zultania">Zultania</string>
+    <string name="mondialextincteur">Mondial Extincteur</string>
+    <string name="yguerp">Site personnel</string>
+    <string name="incoming">A venir...</string>
 
     <string-array name="name">
         <item>HTML 5</item>
@@ -25,5 +32,9 @@
         <item>Java</item>
         <item>C#</item>
         <item>Kotlin for Android</item>
+        <item>Swift</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

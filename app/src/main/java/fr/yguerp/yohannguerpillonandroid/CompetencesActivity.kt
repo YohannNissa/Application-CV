@@ -84,8 +84,8 @@ class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItem
                 //replace(AccueilFragment())
             }
             R.id.nav_competences -> {
-                /*val intentCompetences = Intent(this, CompetencesActivity::class.java)
-                startActivity(intentCompetences)*/
+                val intentCompetences = Intent(this, CompetencesActivity::class.java)
+                startActivity(intentCompetences)
             }
             R.id.nav_realisations -> {
                 val intentRealisations = Intent(this, RealisationsActivity::class.java)
@@ -95,7 +95,7 @@ class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItem
                 replace(MagicCircleFragment())
             }
             R.id.nav_a_propos -> {
-
+                replace(AProposFragment())
             }
         }
 
@@ -106,8 +106,8 @@ class CompetencesActivity : AppCompatActivity(), NavigationView.OnNavigationItem
     private fun seedItems(){
         val nameArray = resources.getStringArray(R.array.name)
         val imgArray = arrayOf(R.drawable.ic_html_5_logo, R.drawable.ic_css_3, R.drawable.ic_js,
-                R.drawable.ic_php, R.drawable.ic_java, R.drawable.ic_c_sharp, R.drawable.ic_android_logo)
-        val levelArray = arrayOf(10, 10, 7, 8, 8, 8, 7)
+                R.drawable.ic_php, R.drawable.ic_java, R.drawable.ic_c_sharp, R.drawable.ic_android_logo, R.drawable.ic_swift)
+        val levelArray = arrayOf(10, 10, 7, 8, 8, 8, 7, 6)
         for (k in 0..(nameArray.size - 1)) {
             items[k] = Competence(nameArray[k], imgArray[k], levelArray[k])
         }

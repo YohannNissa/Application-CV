@@ -72,7 +72,7 @@ class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
                 replace(MagicCircleFragment())
             }
             R.id.nav_a_propos -> {
-                //replace()
+                replace(AProposFragment())
             }
         }
         drawer_layout_realisations.closeDrawer(GravityCompat.START)
@@ -87,6 +87,12 @@ class RealisationsActivity : AppCompatActivity(), NavigationView.OnNavigationIte
             }
             R.id.zultaniaCardView -> {
                 url = "https://zultania-mc.fr/"
+            }
+            R.id.mondialextincteurCardView -> {
+                url = "https://www.mondialextincteur.fr"
+            }
+            R.id.yguerpCardView -> {
+                url = "https://yguerp.fr"
             }
         }
         val uris = Uri.parse(url)
