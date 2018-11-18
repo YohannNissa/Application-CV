@@ -2,13 +2,13 @@ README
 
 
 
-Titre du Projet : Yohann Guerpillon – Application CV
+**Titre du Projet :** Yohann Guerpillon – Application CV
 
-Auteur du projet : Yohann Guerpillon
+**Auteur du projet :** Yohann Guerpillon
 
-Auteur du Readme : Matthieu Cabanes
+**Auteur du Readme :** Matthieu Cabanes
 
-Résumé du projet : Cette application a pour but de faire office de CV. En entretien ou rendez-vous d’embauche cette app doit être un bagage en plus à présenter.
+**Résumé du projet :** Cette application a pour but de faire office de CV. En entretien ou rendez-vous d’embauche cette app doit être un bagage en plus à présenter.
 
 
 Application sur l’écran d’accueil :
@@ -38,3 +38,6 @@ Fragment Magic Circle (MagicCircleFragment) :
 A propos  (AProposFragment) :
 
 ![mainactivity](https://yguerp.fr/assets/img/App7.png)
+
+**Remarque sur le code:**
+Les noms de variables et de classes sont pertinents et ont un sens, l'application reste simple donc n'utilise pas de ressources gourmandes pour le téléphone et les critères du TP on été respectés.
